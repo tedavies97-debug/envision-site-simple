@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnVision — Socials + Smart Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B1020;
+      --surface: #0F172A;
+      --text: #E2E8F0;
+      --primary: #6366F1;
+      --accent: #22D3EE;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    header, footer {
+      backdrop-filter: blur(6px);
+      background: rgba(15,23,42,.6);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    footer { border-top: 1px solid rgba(255,255,255,.08); border-bottom: none; }
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 16px; }
+    h1 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1.1;
+      margin: 0 0 8px 0;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.lede { margin: 0; opacity: .9; }
+    .grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: #11182F;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    label { font-size: 14px; opacity: .9; display: block; margin-top: 10px; text-align: left; }
+    input[type="text"], input[type="email"] {
+      width: 100%; padding: 12px 14px; margin-top: 6px;
+      border-radius: 10px; border: 1px solid rgba(255,255,255,.15);
+      background: #1E293B; color: var(--text);
+    }
+    .consent { display: flex; gap: 10px; align-items: flex-start; margin-top: 10px; text-align: left; }
+    .consent input { margin-top: 4px; }
+    button {
+      width: 100%; padding: 12px 16px; margin-top: 12px;
+      border-radius: 12px; border: 0; cursor: pointer;
+      background: var(--primary); color: var(--bg); font-weight: 700;
+    }
+    .small { font-size: 12px; opacity: .7; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-family:"Sora",sans-serif; color: var(--primary); }
+    .reticle { width:26px; height:26px; }
+    .links a { color: var(--text); opacity:.9; text-decoration: none; margin-right: 14px;}
+    .links a:hover { opacity: 1; text-decoration: underline; }
+    .center { text-align:center; }
+    .ok { color: #10B981; }
+    .err { color: #F87171; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between;">
+      <div class="brand">
+        <svg class="reticle" viewBox="0 0 64 64" fill="none">
+          <g stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="32" cy="32" r="30" stroke="#3C5AA0" stroke-width="2.2"></circle>
+            <circle cx="32" cy="32" r="22" stroke="#4461AA" stroke-width="1.8"></circle>
+            <circle cx="32" cy="32" r="15" stroke="#6366F1" stroke-width="3"></circle>
+            <line x1="2" y1="32" x2="62" y2="32" stroke="#3C5AA0" stroke-width="2"></line>
+            <line x1="32" y1="2" x2="32" y2="62" stroke="#3C5AA0" stroke-width="2"></line>
+            <circle cx="32" cy="32" r="2.6" fill="#22D3EE"></circle>
+          </g>
+        </svg>
+        <span>EnVision</span>
+      </div>
+      <nav class="links small">
+        <a href="#socials">Socials</a>
+        <a href="#pricebot">Pricebot</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="center" style="padding: 34px 0 10px;">
+      <h1>Short‑form that books calls + weekly pricing actions.</h1>
+      <p class="lede">Two offers: Socials Micro‑Agency and Pricebot‑as‑a‑Service.</p>
+    </section>
+
+    <section id="socials" class="grid" style="margin-top: 24px;">
+      <div class="card">
+        <h2 style="margin:0 0 8px 0;font-family:Sora, sans-serif;">Socials — Packages</h2>
+        <ul class="small" style="text-align:left; line-height:1.6;">
+          <li>Starter — £300/m: 4 posts, 1 reel, £50 ad test, monthly report</li>
+          <li>Growth — £600/m: 8–12 posts, 1 reel/wk, £50–£200 tests, comment DMs, GA4/Pixel</li>
+          <li>Performance — £1,000/m: + on‑site content day, UGC briefs, A/B ads, dashboard</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 style="margin:0 0 8px 0;font-family:Sora, sans-serif;">Get a free mini‑audit</h2>
+        <form id="leadForm">
+          <label>First name
+            <input type="text" name="first_name" required>
+          </label>
+          <label>Work email
+            <input type="email" name="work_email" required>
+          </label>
+          <label>Company (optional)
+            <input type="text" name="company">
+          </label>
+          <label class="consent"><input type="checkbox" name="consent" required> I agree to be contacted by EnVision.</label>
+          <button type="submit">Get the mini‑audit</button>
+          <p id="msg" class="small"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="pricebot" class="grid" style="margin-top: 24px;">
+      <div class="card">
+        <h2 style="margin:0 0 8px 0;font-family:Sora, sans-serif;">Pricebot — Tiers</h2>
+        <ul class="small" style="text-align:left; line-height:1.6;">
+          <li>Lite — £99/m (≤250 SKUs, weekly scan, Top‑10 actions email)</li>
+          <li>Standard — £199/m (≤1,000 SKUs, 2×/week scans, sheet dashboard, stock‑out alerts)</li>
+          <li>Pro — £399/m (≤3,000 SKUs, 3×/week scans, priority alerts, API/CSV, review call)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 style="margin:0 0 8px 0;font-family:Sora, sans-serif;">Why it works</h2>
+        <ul class="small" style="text-align:left; line-height:1.6;">
+          <li>We scan competitors and flag margin leaks / MAP issues.</li>
+          <li>Send simple Top‑10 actions you can apply in minutes.</li>
+          <li>Optional call to review changes and results.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="privacy" class="card" style="margin-top:24px;">
+      <h2 style="margin:0 0 8px 0;font-family:Sora, sans-serif;">Privacy (short)</h2>
+      <p class="small">We collect first name, work email, optional company, consent, timestamp, page URL and (where possible) IP for lead fulfilment and analytics. We don’t sell your data. Request deletion via <a href="mailto:hello@envision.studio" style="color:#E2E8F0;">hello@envision.studio</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap small" style="display:flex;align-items:center;justify-content:space-between;">
+      <span>© <script>document.write(new Date().getFullYear())</script> EnVision</span>
+      <span>Dark + electric by EnVision</span>
+    </div>
+  </footer>
+
+  <script>
+    // === EDIT THIS: paste your Cloudflare Worker URL:
+    const WORKER_URL = "https://YOUR-WORKER-SUBDOMAIN.workers.dev";
+
+    const form = document.getElementById('leadForm');
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.textContent = "Submitting…";
+      const fd = new FormData(form);
+      const payload = {
+        first_name: fd.get('first_name'),
+        work_email: fd.get('work_email'),
+        company: fd.get('company'),
+        consent: !!fd.get('consent'),
+        context: 'socials',
+        timestamp: new Date().toISOString(),
+        page_url: window.location.href
+      };
+      try {
+        const r = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(payload)
+        });
+        const j = await r.json();
+        if (j.ok) {
+          msg.innerHTML = '<span class="ok">✅ Submitted — check your inbox shortly.</span>';
+          form.reset();
+        } else {
+          msg.innerHTML = '<span class="err">❌ Error: ' + (j.error || 'unknown') + '</span>';
+        }
+      } catch (err) {
+        msg.innerHTML = '<span class="err">❌ Failed to send</span>';
+      }
+    });
+  </script>
+</body>
+</html>
